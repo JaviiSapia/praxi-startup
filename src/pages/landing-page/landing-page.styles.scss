@@ -1,0 +1,73 @@
+
+.landingPageContainer {
+
+    .mainPanel {
+        height: 518px;
+        background-color: #212121;
+        position: relative;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .secondPanel {
+        height: 241px;
+        background-color: #171717;
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+    .secondPanel:before {
+        position: absolute;
+        content: '';
+        width: 60%;
+        height: 125px;
+        top: -40px;
+        left: 0;
+        background-color: #171717;
+        transform: skewY(6deg);
+    }
+
+    .secondPanel:after {
+        position: absolute;
+        content: '';
+        width: 60%;
+        height: 125px;
+        top: -40px;
+        right: 0;
+        background-color: #171717;
+        transform: skewY(-6deg);
+    }
+
+    .thirdPanel {
+        height: 364px;
+        background-color: #ffff;
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+    .thirdPanel:before {
+        position: absolute;
+        content: '';
+        width: 60%;
+        height: 125px;
+        top: -40px;
+        left: 0;
+        background-color: #ffff;
+        transform: skewY(6deg);
+    }
+
+    .thirdPanel:after {
+        position: absolute;
+        content: '';
+        width: 60%;
+        height: 125px;
+        top: -40px;
+        right: 0;
+        background-color: #ffff;
+        transform: skewY(-6deg);
+    }
+}
