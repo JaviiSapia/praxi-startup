@@ -6,9 +6,77 @@
         background-color: #212121;
         position: relative;
         width: 100%;
-
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        z-index: 0;
+
+        .mainPanelText {
+            margin-top: 66px;
+            display: flex;
+            flex-direction: column;
+            
+            .mainPanelTitle {
+                text-align: center;
+                color: #ffff;
+                font-size: 49px;
+                font-weight: 400;
+                margin: 0 0 15px 0;
+            }
+            .mainPanelSubTitle {
+                text-align: center;
+                margin: 0;
+                font-size: 21px;
+                line-height: 28px;
+                color: #D1D1D1;
+            }
+        }
+
+        .mainPanelButton {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+                .mainPanelButtonInner {
+                    background-color: #2196F3;
+                    padding: 5px;
+                    border-radius: 5px;
+                    border: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 214.02px;
+                    height: 41px;
+                    margin-top: 56px;
+                
+                    a {
+                        text-decoration: none;
+                        font-family: 'Open Sans';
+                        font-size: 12px;
+                        color: white;
+                        text-transform: uppercase;
+                        margin: 0 8px;
+                    }
+                }  
+
+                .modelButton {
+                    cursor: pointer;
+                    color: #ffff;
+                    font-size: 14px;
+                }
+            }
+        
+        .mainPanelImage {
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
+            top: 58%;
+            z-index: -1;
+
+            .octopusLogo {
+                
+            }
+        }
     }
 
     .secondPanel {
@@ -22,23 +90,25 @@
     .secondPanel:before {
         position: absolute;
         content: '';
-        width: 60%;
+        width: 50%;
         height: 125px;
         top: -40px;
         left: 0;
         background-color: #171717;
-        transform: skewY(6deg);
+        transform: skewY(4.8deg);
+        border-top: 3px solid #2d2d2d;
     }
 
     .secondPanel:after {
         position: absolute;
         content: '';
-        width: 60%;
+        width: 50%;
         height: 125px;
         top: -40px;
         right: 0;
         background-color: #171717;
-        transform: skewY(-6deg);
+        transform: skewY(-4.8deg);
+        border-top: 3px solid #2d2d2d;
     }
 
     .thirdPanel {
@@ -52,22 +122,22 @@
     .thirdPanel:before {
         position: absolute;
         content: '';
-        width: 60%;
+        width: 50%;
         height: 125px;
         top: -40px;
         left: 0;
         background-color: #ffff;
-        transform: skewY(6deg);
+        transform: skewY(4.8deg);
     }
 
     .thirdPanel:after {
         position: absolute;
         content: '';
-        width: 60%;
+        width: 50%;
         height: 125px;
         top: -40px;
         right: 0;
         background-color: #ffff;
-        transform: skewY(-6deg);
+        transform: skewY(-4.8deg);
     }
 }
