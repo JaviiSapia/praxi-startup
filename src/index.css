@@ -1,11 +1,8 @@
 html {
   box-sizing: border-box;
   height: 100%;
-<<<<<<< HEAD
   display: flex;
   justify-content: center;
-=======
->>>>>>> upstream/master
 }
 
 *, *::after, *::before {
