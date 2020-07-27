@@ -1,0 +1,202 @@
+
+.landingPageContainer {
+    height: 1960px;
+    display: flex;
+    flex-direction: column;
+
+    .mainPanel {
+        height: 26.5%;
+        background-color: #212121;
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        z-index: -4;
+
+        .mainPanelText {
+            margin-top: 66px;
+            display: flex;
+            flex-direction: column;
+            
+            .mainPanelTitle {
+                text-align: center;
+                color: #ffff;
+                font-size: 49px;
+                font-weight: 400;
+                margin: 0 0 15px 0;
+            }
+            .mainPanelSubTitle {
+                text-align: center;
+                margin: 0;
+                font-size: 21px;
+                line-height: 28px;
+                color: #D1D1D1;
+            }
+        }
+
+        .mainPanelButton {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+                .mainPanelButtonInner {
+                    background-color: #2196F3;
+                    padding: 5px;
+                    border-radius: 5px;
+                    border: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 214.02px;
+                    height: 41px;
+                    margin-top: 56px;
+                
+                    a {
+                        text-decoration: none;
+                        font-family: 'Open Sans';
+                        font-size: 12px;
+                        color: white;
+                        text-transform: uppercase;
+                        margin: 0 8px;
+                    }
+                }  
+
+                .modelButton {
+                    cursor: pointer;
+                    color: #ffff;
+                    font-size: 14px;
+                }
+            }
+        
+        .mainPanelImage {
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
+            top: 58%;
+            z-index: -1;
+
+            .octopusLogo {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .secondPanel {
+        //height: 241px;
+        height: 9.04%;
+        background-color: #171717;
+        position: relative;
+        text-align: center;
+        width: 100%;
+
+        .secondPanelText {
+
+            .secondPanelTitle {
+                margin: 0;
+                padding-top: 3%;
+                color: #ffff;
+                font-size: 49px;
+            }   
+
+            .secondPanelSubTitle {
+                margin: 0;
+                padding-top: 15px;
+                color: #D1D1D1;
+                font-size: 21px;
+            }   
+        }
+    }
+
+    .triangleContainer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: #ffff;
+
+        .triangleSvg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .dark {
+            background-color: #171717;
+        }
+    }
+
+    .thirdPanel {
+        height: 20.21%;
+        background-color: #ffff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
+        align-items: center;
+        padding: 2.15%  14.59%;
+
+            .thirdPanelModel {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                height: 81%;
+                width: 13%;
+
+                .radiusButton {
+                    height: 13%;
+                    width: 20%;
+                    border-radius: 50%;
+                    background-color: #1769AA;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 1%;
+                    .radiusNumber{
+                        color: #ffff;
+                    }
+                }
+
+                .modelTitleContainer {
+                    height: 30%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;    
+
+                    .modelTitle {
+                        font-size: 150%;
+                        font-weight: bold;
+                        text-align: center;
+                    }                    
+                }
+                
+                .modelLogoContainer {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height:30%;
+                    .modelLogo {
+                        margin: 49px 0;
+                    }
+                }
+                
+                .modelTextContainer {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 20%;
+
+                    .modelText {
+                        margin: 0;
+                        font-size: 90%;
+                        font-weight: 500;
+                        color: #4D4D4D;
+                        text-align: center;
+                    }
+                }
+            }
+
+    }
+
+}
+
+   
