@@ -25,7 +25,7 @@ const LandingPage = () => {
                 </div>
             </div>
             <div className='secondPanel'>
-
+            
             </div>
             <div className='thirdPanel'>
 
