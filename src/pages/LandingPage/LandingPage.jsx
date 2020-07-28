@@ -6,8 +6,9 @@ import { ReactComponent as ModelLogo } from '../../assets/LandingPage/svg-quote.
 import { ReactComponent as HandShakeLogo } from '../../assets/LandingPage/svg-handshake.svg';
 import { ReactComponent as MercadoLibreLogo } from '../../assets/LandingPage/svg-mercado_libre.svg';
 import { ReactComponent as TruckLogo } from '../../assets/LandingPage/svg-truck.svg';
-import { ReactComponent as FirstTriangle} from '../../assets/LandingPage/svg-first-triangle.svg';
+import { ReactComponent as FirstTriangle } from '../../assets/LandingPage/svg-first-triangle.svg';
 import { ReactComponent as SecondTriangle } from '../../assets/LandingPage/svg-second-triangle.svg';
+import { Button, Icon } from 'semantic-ui-react';
 
 const LandingPage = () => {
     return (
@@ -30,9 +31,11 @@ const LandingPage = () => {
                     <OctopusLogo className='octopusLogo' />
                 </div>
             </div>
+
             <div className='triangleContainer'>
                 <FirstTriangle className='triangleSvg dark' />
             </div>
+
             <div className='secondPanel'>
                 <div className='secondPanelText'>
                     <p className='secondPanelTitle'>¿Cómo funciona?</p>
@@ -43,63 +46,87 @@ const LandingPage = () => {
                 <SecondTriangle className='triangleSvg' />
             </div>
             <div className='thirdPanel'>
-                    <div className='thirdPanelModel'>
-                        <div className='radiusButton'>
-                            <span className='radiusNumber'>1</span>
-                        </div>
-                        <div className='modelTitleContainer'>
-                            <p className='modelTitle'>Cotiza tu modelo</p>
-                        </div>
-                        <div className='modelLogoContainer'>
-                            <ModelLogo className='modelLogo'/>
-                        </div>
-                        <div className='modelTextContainer'>
-                            <p className='modelText'>¿Necesitas un modelo?<br/>Contrata un diseñador</p>
-                        </div>
+                <div className='thirdPanelModel'>
+                    <div className='radiusButton'>
+                        <span className='radiusNumber'>1</span>
                     </div>
-                    <div className='thirdPanelModel'>
-                        <div className='radiusButton'>
-                            <span className='radiusNumber'>2</span>
-                        </div>
-                        <div className='modelTitleContainer'>
-                            <p className='modelTitle'>Contrata un <br/>maker</p>
-                        </div>
-                        <div className='modelLogoContainer'>
-                            <HandShakeLogo className='modelLogo' />
-                        </div>
-                        <div className='modelTextContainer'>
-                            <p className='modelText'>Tenemos buna gente</p>  
-                        </div>              
+                    <div className='modelTitleContainer'>
+                        <p className='modelTitle'>Cotiza tu modelo</p>
                     </div>
-                    <div className='thirdPanelModel'>
-                        <div className='radiusButton'>
-                            <span className='radiusNumber'>3</span>
-                        </div>
-                        <div className='modelTitleContainer'>
-                            <p className='modelTitle'>Pagá con <br/>Mercado Pago</p>
-                        </div>
-                        <div className='modelLogoContainer'>
-                            <MercadoLibreLogo className='modelLogo' />
-                        </div>
-                        <div className='modelTextContainer'>
-                            <p className='modelText'>En efectivo, transferencia <br/>o tarjeta de crédito/débito.</p> 
-                        </div>               
+                    <div className='modelLogoContainer'>
+                        <ModelLogo className='modelLogo' />
                     </div>
-                    <div className='thirdPanelModel'>
-                        <div className='radiusButton'>
-                            <span className='radiusNumber'>4</span>
-                        </div>
-                        <div className='modelTitleContainer'>
-                            <p className='modelTitle'>Recibilo en <br/>tu casa</p>
-                        </div>
-                        <div className='modelLogoContainer'>
-                            <TruckLogo className='modelLogo' />
-                        </div>
-                        <div className='modelTextContainer'>
-                            <p className='modelText'>Así de fácil y comodo</p>
-                        </div>                
-                    </div>  
+                    <div className='modelTextContainer'>
+                        <p className='modelText'>¿Necesitas un modelo?<br />Contrata un diseñador</p>
+                    </div>
                 </div>
+                <div className='thirdPanelModel'>
+                    <div className='radiusButton'>
+                        <span className='radiusNumber'>2</span>
+                    </div>
+                    <div className='modelTitleContainer'>
+                        <p className='modelTitle'>Contrata un <br />maker</p>
+                    </div>
+                    <div className='modelLogoContainer'>
+                        <HandShakeLogo className='modelLogo' />
+                    </div>
+                    <div className='modelTextContainer'>
+                        <p className='modelText'>Tenemos buna gente</p>
+                    </div>
+                </div>
+                <div className='thirdPanelModel'>
+                    <div className='radiusButton'>
+                        <span className='radiusNumber'>3</span>
+                    </div>
+                    <div className='modelTitleContainer'>
+                        <p className='modelTitle'>Pagá con <br />Mercado Pago</p>
+                    </div>
+                    <div className='modelLogoContainer'>
+                        <MercadoLibreLogo className='modelLogo' />
+                    </div>
+                    <div className='modelTextContainer'>
+                        <p className='modelText'>En efectivo, transferencia <br />o tarjeta de crédito/débito.</p>
+                    </div>
+                </div>
+                <div className='thirdPanelModel'>
+                    <div className='radiusButton'>
+                        <span className='radiusNumber'>4</span>
+                    </div>
+                    <div className='modelTitleContainer'>
+                        <p className='modelTitle'>Recibilo en <br />tu casa</p>
+                    </div>
+                    <div className='modelLogoContainer'>
+                        <TruckLogo className='modelLogo' />
+                    </div>
+                    <div className='modelTextContainer'>
+                        <p className='modelText'>Así de fácil y comodo</p>
+                    </div>
+                </div>
+            </div>
+            <div className='fourthPanel'>
+                <div className='fourthPanelInnerContainer'>
+                    <div>
+                        <p className='fourthPanelTitle'>
+                            ¿Necesitas un modelo?
+                        </p>
+                    </div>
+                    <div>
+                        <p className='fourthPanelSubTitle'>
+                            Contanos que es lo que necesitas.<br/>
+                            Por ejemplo, un objeto ya existente, o desde un plano o dibujo, o simplemente desde cero.<br />
+                            Contrata al maker que mejor entendió tu idea y ellos te irán mostrando como va quedando<br/>tu modelo.
+                        </p>
+                    </div>
+                    <div className='fourthPanelButton'>
+                        <Button animated>
+                            <Button.Content visible>CONTANOS TU IDEA</Button.Content>
+                            <Button.Content hidden>
+                                <Icon name='pencil' />
+                            </Button.Content>
+                        </Button>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
