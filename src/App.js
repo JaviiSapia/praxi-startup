@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
 import LandingPage from './pages/LandingPage/LandingPage';
+import RegisterPage from './pages/Register-Page/RegisterPage';
 
 function App() {
   return (
     <div className="App">
-      <LandingPage />
+      <RegisterPage />
     </div>
   );
 }

@@ -1,0 +1,32 @@
+.RegisterPageContainer{
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+        .ImgPanel{
+            width: 38.2%;
+            height: 100%;
+            display: flex;
+            background-image: url("../../assets/RegisterPage/happypeople.jpg");
+            padding-top: 46%;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+
+            .ImgProps{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .FormPanel{
+            padding: 3.47%;
+            width: 61.8%;
+            height: 100%;
+            display: flex;
+            background-color: white;
+        }
+        
+        
+}

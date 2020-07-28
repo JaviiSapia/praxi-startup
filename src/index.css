@@ -1,6 +1,8 @@
 html {
   box-sizing: border-box;
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 *, *::after, *::before {
@@ -21,6 +23,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #212121;
+  width: 100%;
+
 }
 
 code {
