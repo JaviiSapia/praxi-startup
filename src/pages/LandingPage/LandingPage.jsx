@@ -33,6 +33,7 @@ const LandingPage = () => {
             </div>
 
             <div className='triangleContainer'>
+                
                 <FirstTriangle className='triangleSvg dark' />
             </div>
 
@@ -42,9 +43,11 @@ const LandingPage = () => {
                     <p className='secondPanelSubTitle'>¡Muy fácil!</p>
                 </div>
             </div>
+
             <div className='triangleContainer'>
                 <SecondTriangle className='triangleSvg' />
             </div>
+
             <div className='thirdPanel'>
                 <div className='thirdPanelModel'>
                     <div className='radiusButton'>
@@ -71,7 +74,7 @@ const LandingPage = () => {
                         <HandShakeLogo className='modelLogo' />
                     </div>
                     <div className='modelTextContainer'>
-                        <p className='modelText'>Tenemos buna gente</p>
+                        <p className='modelText'>Tenemos buena gente</p>
                     </div>
                 </div>
                 <div className='thirdPanelModel'>
@@ -103,6 +106,7 @@ const LandingPage = () => {
                     </div>
                 </div>
             </div>
+
             <div className='fourthPanel'>
                 <div className='fourthPanelInnerContainer'>
                     <div>
@@ -112,9 +116,9 @@ const LandingPage = () => {
                     </div>
                     <div>
                         <p className='fourthPanelSubTitle'>
-                            Contanos que es lo que necesitas.<br/>
+                            Contanos que es lo que necesitas.<br />
                             Por ejemplo, un objeto ya existente, o desde un plano o dibujo, o simplemente desde cero.<br />
-                            Contrata al maker que mejor entendió tu idea y ellos te irán mostrando como va quedando<br/>tu modelo.
+                            Contrata al maker que mejor entendió tu idea y ellos te irán mostrando como va quedando<br />tu modelo.
                         </p>
                     </div>
                     <div className='fourthPanelButton'>
@@ -126,6 +130,20 @@ const LandingPage = () => {
                         </Button>
                     </div>
                 </div>
+            </div>
+
+            <div className='fifthPanel'>
+                <div className='fifthPanelInnerContainer'>
+                    <p className='fifthPanelTitle'>¿Tenes impresora 3D? ¿Sos modelador 3D? ¿Ambas?</p>
+                    <p className='fifthPanelSubTitle'>Monetiza tu talento, mucha gente necesita tu ayuda. Compartí o vende tus diseños</p>
+                    <div className='fifthPanelButton'>
+                    <Button className='fifthPanelButton' size='big'>SUMATE</Button>
+                    </div>
+                </div>
+            </div>
+
+            <div className='footerPanel'>
+
             </div>
         </div>
     )
