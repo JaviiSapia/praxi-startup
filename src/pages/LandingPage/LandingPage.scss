@@ -1,60 +1,60 @@
+@use '../../config.scss' as Config;
 
-.landingPageContainer {
-    height: 1960px;
-    display: flex;
+$titleSize: Config.$YVH4 - Config.$YVH8;
+$subtitleSize: Config.$YVH7 + Config.$YVH9;
+
+.landingPageContainer {        
+    display: flex;    
+    width: 100%;    
     flex-direction: column;
 
     .mainPanel {
-        height: 23.62%;
-        background-color: #212121;
-        position: relative;
-        width: 100%;
+        height: Config.$YVH0 + Config.$YVH3;
+        background-color: Config.$backgroundColor;
+        position: relative;        
         display: flex;
         flex-direction: column;
 
-        .mainPanelText {
-            margin-top: 66px;
-            display: flex;
-            flex-direction: column;
-            
+        .mainPanelText {            
+            margin-top: Config.$Y6;
+            display: flex;            
+            flex-direction: column;            
             .mainPanelTitle {
                 text-align: center;
-                color: #ffff;
-                font-size: 49px;
+                color: white;
+                font-size: $titleSize;
                 font-weight: 400;
-                margin: 0 0 15px 0;
+                margin-bottom: Config.$Y9
             }
-            .mainPanelSubTitle {
-                text-align: center;
-                margin: 0   ;
-                font-size: 21px;
-                line-height: 28px;
-                color: #D1D1D1;
+            .mainPanelSubTitle {                                
+                text-align: center;              
+                font-size: $subtitleSize;
+                color: #D1D1D1;                
             }
         }
 
-        .mainPanelButton {
+        .mainPanelButton {            
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
 
                 .mainPanelButtonInner {
-                    background-color: #2196F3;
+                    background-color: Config.$primaryColor;
                     padding: 5px;
                     border-radius: 5px;
                     border: none;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 214.02px;
-                    height: 41px;
-                    margin-top: 56px;
+                    width: Config.$X3 + Config.$X6 + Config.$X7;
+                    height: Config.$YVH5;
+                    margin-top: Config.$Y7 + Config.$X9;
                 
                     a {
                         text-decoration: none;
                         font-family: 'Open Sans';
-                        font-size: 12px;
+                        font-size: Config.$YVH7 - Config.$YVH14;
                         color: white;
                         text-transform: uppercase;
                         margin: 0 8px;
@@ -64,7 +64,7 @@
                 .modelButton {
                     cursor: pointer;
                     color: #ffff;
-                    font-size: 14px;
+                    font-size: Config.$YVH7 - Config.$YVH14;
                     margin-top: 8px;
                 }
             }
@@ -82,12 +82,10 @@
     }
 
     .secondPanel {
-        height: 5.60%;
-        background-color: #171717;
+        height: Config.$YVH3;        
         position: relative;
-        text-align: center;
+        text-align: center;        
         width: 100%;
-
         .secondPanelText {
             display: flex;
             flex-direction: column;
@@ -98,52 +96,53 @@
                 margin: 0;
                 color: #ffff;
                 padding-top: 2%;
-                font-size: 49px;
+                font-size: $titleSize;
             }   
 
             .secondPanelSubTitle {
                 margin: 0;
                 padding-top: 15px;
-                color: #D1D1D1;
-                font-size: 21px;
+                color: #D1D1D1;                
+                font-size: $subtitleSize;
             }   
         }
     }
 
     .thirdPanel {
-        height: 20.21%;
-        background-color: #ffff;
+        height: Config.$YVH1 + Config.$YVH3;
+        background-color: white;        
         display: flex;
         flex-direction: row;
-        justify-content: space-between; 
+        justify-content: space-between;         
         align-items: center;
-        padding: 2.15%  14.59%;
+        padding: Config.$Y6  Config.$X3;
 
-            .thirdPanelModel {
+            .thirdPanelModel {                
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-between;
-                height: 81%;
-                width: 13%;
+                height: Config.$Y0 + Config.$Y2;
+                width: Config.$X2;
 
                 .radiusButton {
                     height: 13%;
-                    width: 20%;
+                    width: 12.5%;
                     border-radius: 50%;
-                    background-color: #1769AA;
+                    background-color: Config.$primaryColorDark;
                     display: flex;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: center;                    
                     margin-bottom: 1%;
                     .radiusNumber{
-                        color: #ffff;
+                        font-size: Config.$Y0 + Config.$Y1;
+                        color: white;
                     }
                 }
 
                 .modelTitleContainer {
                     height: 30%;
-                    width: 100%;
+                    width: 100%;                    
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;    
@@ -158,8 +157,8 @@
                 .modelLogoContainer {
                     display: flex;
                     justify-content: center;
-                    align-items: center;
-                    height:30%;
+                    align-items: center;                    
+                    height:38%;
                     .modelLogo {
                         margin: 49px 0;
                     }
@@ -168,51 +167,46 @@
                 .modelTextContainer {
                     display: flex;
                     justify-content: center;
-                    align-items: center;
-                    height: 20%;
-
+                    align-items: flex-start;
+                    height: 20%;                    
                     .modelText {
                         margin: 0;
                         font-size: 90%;
                         font-weight: 500;
-                        color: #4D4D4D;
+                        color: Config.$backgroundColorLight;
                         text-align: center;
                     }
                 }
             }
-
     }
 
     .fourthPanel {
         width: 100%;
-        height: 23.62%;
-        background-color: red;
+        height: Config.$YVH1 + Config.$YVH4;        
         background-image: url("../../assets/LandingPage/work.JPG");
         background-size: cover;
+        padding: Config.$Y7 Config.$Y6;        
         
         .fourthPanelInnerContainer {      
             display: flex;
-            flex-direction: column;
-            margin: 3.49% 0 0 5.608%;
-            width: 766px;
+            flex-direction: column;            
+            align-items: flex-start;            
 
             .fourthPanelTitle {
-                color: #ffff;
-                font-size: 400%;
+                color: white;
+                font-size: $titleSize;
             }
 
             .fourthPanelSubTitle {
-                color: #ffff;
-                font-size: 18px;
-                font-weight: 300;
-                line-height: 27px;
+                color: white;
+                font-size: Config.$Y0 * 2;
                 margin-top: 0.8047%;
             }
 
             .fourthPanelButton {
                 display: flex;
                 justify-content: flex-end;
-                margin-top: 4%;
+                margin-top: Config.$Y7;
             }
         }
     }
@@ -229,7 +223,7 @@
         }
 
         .dark {
-            background-color: #171717;
+            background-color: Config.$backgroundColorDark;
         }
     }
 
