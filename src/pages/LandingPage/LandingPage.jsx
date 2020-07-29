@@ -137,7 +137,7 @@ const LandingPage = () => {
                     <p className='fifthPanelTitle'>¿Tenes impresora 3D? ¿Sos modelador 3D? ¿Ambas?</p>
                     <p className='fifthPanelSubTitle'>Monetiza tu talento, mucha gente necesita tu ayuda. Compartí o vende tus diseños</p>
                     <div className='fifthPanelButton'>
-                    <Button className='fifthPanelButton' size='big'>SUMATE</Button>
+                    <Button className='fifthPanelButton'>SUMATE</Button>
                     </div>
                 </div>
             </div>

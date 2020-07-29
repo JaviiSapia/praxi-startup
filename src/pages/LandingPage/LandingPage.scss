@@ -211,6 +211,40 @@ $subtitleSize: Config.$YVH7 + Config.$YVH9;
         }
     }
 
+    .fifthPanel {
+        width: 100%;
+        height: Config.$YVH1;
+        background: linear-gradient(Config.$primaryColorFilter, Config.$primaryColorFilter), url('../../assets/LandingPage/work_2.jpg');
+        background-size: cover;
+        padding: Config.$Y7 Config.$Y6; 
+
+        .fifthPanelInnerContainer {
+            display: flex;
+            flex-direction: column;            
+            align-items: flex-start;    
+        }
+
+            .fifthPanelTitle {
+                color: white;
+                font-size: Config.$XVH5 ;
+                margin: 0;
+            }
+
+            .fifthPanelSubTitle {
+                color: white;
+                font-size: Config.$Y0 * 2;
+                margin-top: 0.8047%;
+            }
+
+            .fifthPanelButton {
+                margin-top: Config.$Y8;
+            }
+    }
+
+    .footerPanel {
+        height: Config.$YVH3;
+    }
+
         .triangleContainer {
             display: flex;
             justify-content: center;
