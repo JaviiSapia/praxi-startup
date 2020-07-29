@@ -1,0 +1,232 @@
+@use '../../config.scss' as Config;
+
+$titleSize: Config.$YVH4 - Config.$YVH8;
+$subtitleSize: Config.$YVH7 + Config.$YVH9;
+
+.landingPageContainer {        
+    display: flex;    
+    width: 100%;    
+    flex-direction: column;
+
+    .mainPanel {
+        height: Config.$YVH0 + Config.$YVH3;
+        background-color: Config.$backgroundColor;
+        position: relative;        
+        display: flex;
+        flex-direction: column;
+
+        .mainPanelText {            
+            margin-top: Config.$Y6;
+            display: flex;            
+            flex-direction: column;            
+            .mainPanelTitle {
+                text-align: center;
+                color: white;
+                font-size: $titleSize;
+                font-weight: 400;
+                margin-bottom: Config.$Y9
+            }
+            .mainPanelSubTitle {                                
+                text-align: center;              
+                font-size: $subtitleSize;
+                color: #D1D1D1;                
+            }
+        }
+
+        .mainPanelButton {            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+                .mainPanelButtonInner {
+                    background-color: Config.$primaryColor;
+                    padding: 5px;
+                    border-radius: 5px;
+                    border: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: Config.$X3 + Config.$X6 + Config.$X7;
+                    height: Config.$YVH5;
+                    margin-top: Config.$Y7 + Config.$X9;
+                
+                    a {
+                        text-decoration: none;
+                        font-family: 'Open Sans';
+                        font-size: Config.$YVH7 - Config.$YVH14;
+                        color: white;
+                        text-transform: uppercase;
+                        margin: 0 8px;
+                    }
+                }  
+
+                .modelButton {
+                    cursor: pointer;
+                    color: #ffff;
+                    font-size: Config.$YVH7 - Config.$YVH14;
+                    margin-top: 8px;
+                }
+            }
+        
+        .mainPanelImage {
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
+            top: 73%;
+            .octopusLogo {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .secondPanel {
+        height: Config.$YVH3;        
+        position: relative;
+        text-align: center;        
+        width: 100%;
+        .secondPanelText {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            .secondPanelTitle {
+                margin: 0;
+                color: #ffff;
+                padding-top: 2%;
+                font-size: $titleSize;
+            }   
+
+            .secondPanelSubTitle {
+                margin: 0;
+                padding-top: 15px;
+                color: #D1D1D1;                
+                font-size: $subtitleSize;
+            }   
+        }
+    }
+
+    .thirdPanel {
+        height: Config.$YVH1 + Config.$YVH3;
+        background-color: white;        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;         
+        align-items: center;
+        padding: Config.$Y6  Config.$X3;
+
+            .thirdPanelModel {                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                height: Config.$Y0 + Config.$Y2;
+                width: Config.$X2;
+
+                .radiusButton {
+                    height: 13%;
+                    width: 12.5%;
+                    border-radius: 50%;
+                    background-color: Config.$primaryColorDark;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;                    
+                    margin-bottom: 1%;
+                    .radiusNumber{
+                        font-size: Config.$Y0 + Config.$Y1;
+                        color: white;
+                    }
+                }
+
+                .modelTitleContainer {
+                    height: 30%;
+                    width: 100%;                    
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;    
+
+                    .modelTitle {
+                        font-size: 150%;
+                        font-weight: bold;
+                        text-align: center;
+                    }                    
+                }
+                
+                .modelLogoContainer {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;                    
+                    height:38%;
+                    .modelLogo {
+                        margin: 49px 0;
+                    }
+                }
+                
+                .modelTextContainer {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    height: 20%;                    
+                    .modelText {
+                        margin: 0;
+                        font-size: 90%;
+                        font-weight: 500;
+                        color: Config.$backgroundColorLight;
+                        text-align: center;
+                    }
+                }
+            }
+    }
+
+    .fourthPanel {
+        width: 100%;
+        height: Config.$YVH1 + Config.$YVH4;        
+        background-image: url("../../assets/LandingPage/work.JPG");
+        background-size: cover;
+        padding: Config.$Y7 Config.$Y6;        
+        
+        .fourthPanelInnerContainer {      
+            display: flex;
+            flex-direction: column;            
+            align-items: flex-start;            
+
+            .fourthPanelTitle {
+                color: white;
+                font-size: $titleSize;
+            }
+
+            .fourthPanelSubTitle {
+                color: white;
+                font-size: Config.$Y0 * 2;
+                margin-top: 0.8047%;
+            }
+
+            .fourthPanelButton {
+                display: flex;
+                justify-content: flex-end;
+                margin-top: Config.$Y7;
+            }
+        }
+    }
+
+        .triangleContainer {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background-color: #ffff;
+
+        .triangleSvg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .dark {
+            background-color: Config.$backgroundColorDark;
+        }
+    }
+
+}
+
+   
