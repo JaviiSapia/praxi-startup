@@ -1,6 +1,5 @@
-import React from 'react';
+import React, {useState, useCallback} from 'react';
 import './LandingPage.scss';
-import Header from '../../components/Header/Header';
 import { ReactComponent as OctopusLogo } from '../../assets/LandingPage/svg-octopus.svg';
 import { ReactComponent as ModelLogo } from '../../assets/LandingPage/svg-quote.svg';
 import { ReactComponent as HandShakeLogo } from '../../assets/LandingPage/svg-handshake.svg';
@@ -9,31 +8,71 @@ import { ReactComponent as TruckLogo } from '../../assets/LandingPage/svg-truck.
 import { ReactComponent as FirstTriangle } from '../../assets/LandingPage/svg-first-triangle.svg';
 import { ReactComponent as SecondTriangle } from '../../assets/LandingPage/svg-second-triangle.svg';
 import { Button, Icon } from 'semantic-ui-react';
+import { useDropzone } from 'react-dropzone'
+import ModelViewer from '../../components/ModelViewer/ModelViewer';
 
 const LandingPage = () => {
+
+    const [selectedFile, setFile] = useState(null); 
+    
+    const handleFileChange = (event) => {
+        const fileList = event.target.files;
+
+        if (!fileList) {
+            return;
+        }
+
+        const file = fileList[0];
+
+        if (!file || !(file.name.split('.').pop() === 'stl')) {
+            return;
+        }
+        
+        setFile(file);
+    };
+
+    const onDrop = useCallback(file => {
+        if (!file || !(file[0].name.split('.').pop() === 'stl')) {
+            //error
+            return;
+        }
+
+        setFile(file[0]);
+    }, [])
+
+    const { getRootProps } = useDropzone({ onDrop })
+
     return (
-        <div className='landingPageContainer'>
-            <Header />
+        <div className='landingPageContainer' {...getRootProps()} /*Drop Zone*/>
             <div className='mainPanel'>
-                <div className='mainPanelText'>
-                    <p className='mainPanelTitle'>Subí y solidifica tus modelos</p>
-                    <p className='mainPanelSubTitle'>Arrastra y solta donde quieras tu archivo. Configura la impresión. <br />Cotiza tu modelo por mas de 10.000 makers</p>
-                </div>
-                <div className="mainPanelButton">
-                    <div className="mainPanelButtonInner">
-                        <a className="loadButton" href="#">Cargar un modelo</a>
-                    </div>
-                    <div>
-                        <p className='modelButton'>¿NECEISTAS UN MODELO?</p>
-                    </div>
-                </div>
-                <div className='mainPanelImage'>
-                    <OctopusLogo className='octopusLogo' />
-                </div>
+                {
+                    selectedFile ? 
+                        <div className='mainPanelModelViewer'>
+                            <ModelViewer file={selectedFile} setFile={setFile}/>
+                        </div>
+                        :
+                        <div>
+                            <div className='mainPanelText'>
+                                <p className='mainPanelTitle'>Subí y solidifica tus modelos</p>
+                                <p className='mainPanelSubTitle'>Arrastra y solta donde quieras tu archivo. Configura la impresión. <br />Cotiza tu modelo por mas de 10.000 makers</p>
+                            </div>
+                            <div className="mainPanelButton">
+                                <div className="mainPanelButtonInner">
+                                    <input type='file' id='file' className='hide' onChange={handleFileChange}   />
+                                    <label htmlFor='file'>Cargar un modelo</label>
+                                </div>
+                                <div>
+                                    <p className='modelButton'>¿NECEISTAS UN MODELO?</p>
+                                </div>
+                            </div>
+                            <div className='mainPanelImage'>
+                                <OctopusLogo className='octopusLogo' />
+                            </div>      
+                        </div>
+                }
             </div>
 
             <div className='triangleContainer'>
-                
                 <FirstTriangle className='triangleSvg dark' />
             </div>
 
@@ -122,11 +161,9 @@ const LandingPage = () => {
                         </p>
                     </div>
                     <div className='fourthPanelButton'>
-                        <Button animated>
+                        <Button animated='fade'>
                             <Button.Content visible>CONTANOS TU IDEA</Button.Content>
-                            <Button.Content hidden>
-                                <Icon name='pencil' />
-                            </Button.Content>
+                            <Button.Content hidden><Icon name='pencil' /></Button.Content>
                         </Button>
                     </div>
                 </div>

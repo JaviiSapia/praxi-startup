@@ -8,6 +8,10 @@ $subtitleSize: Config.$YVH7 + Config.$YVH9;
     width: 100%;    
     flex-direction: column;
 
+    &:focus {
+        outline: none;
+    }
+
     .mainPanel {
         height: Config.$YVH0 + Config.$YVH3;
         background-color: Config.$backgroundColor;
@@ -51,13 +55,19 @@ $subtitleSize: Config.$YVH7 + Config.$YVH9;
                     height: Config.$YVH5;
                     margin-top: Config.$Y7 + Config.$X9;
                 
-                    a {
+                    label {
+                        width: 100%;
+                        text-align: center;
                         text-decoration: none;
                         font-family: 'Open Sans';
                         font-size: Config.$YVH7 - Config.$YVH14;
                         color: white;
                         text-transform: uppercase;
                         margin: 0 8px;
+                    }
+
+                    label:hover {
+                       cursor: pointer;
                     }
                 }  
 
@@ -68,7 +78,17 @@ $subtitleSize: Config.$YVH7 + Config.$YVH9;
                     margin-top: 8px;
                 }
             }
+
+            .mainPanelModelViewer {
+                //change height for space
+                height: 100%;
+                width: 100%;
+            }
         
+            .mainPanelButton:hover {
+                cursor: pointer;
+            }
+
         .mainPanelImage {
             position: absolute;
             left: 0;
@@ -259,8 +279,12 @@ $subtitleSize: Config.$YVH7 + Config.$YVH9;
         .dark {
             background-color: Config.$backgroundColorDark;
         }
-    }
 
+    }
+        
+    .hide {
+        display: none;
+    }
 }
 
    
