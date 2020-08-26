@@ -1,0 +1,18 @@
+@use '../../config.scss' as Config;
+
+.mainContainer {
+    display: flex;    
+    min-height: 100vh - Config.$headerHeight;
+    min-width: 100vw;
+    background-color: #F8F8F8;
+    flex-direction: row;    
+
+    .pageContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: Config.$sideNavBarWidth;        
+        width: 100vw - Config.$sideNavBarWidth;        
+    }
+
+}

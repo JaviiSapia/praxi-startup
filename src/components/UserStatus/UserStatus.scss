@@ -1,0 +1,53 @@
+@use '../../config.scss' as Config;
+
+$starsContainerWidth: Config.$X0 + Config.$X4;
+
+.userStatus {
+    display: flex;
+    width: 100%;
+    flex-direction: row;    
+    justify-content: space-between;
+    align-items: center;    
+
+    .userStatusInfo {
+        display: flex;        
+        width: 50%;
+
+        .userStatusStarsContainer {        
+            display: flex;
+            width: $starsContainerWidth;            
+            padding: Config.$Y8 Config.$X6;
+            padding-left: 0;
+            border-right: 1px solid white;            
+            flex-direction: column;
+        }
+
+        .userStatusInfoCount {
+            display: flex;            
+            width: 100% - $starsContainerWidth;
+            justify-content: center;
+            align-items: center;            
+            font-size: Config.$YVH5 + Config.$YVH7;
+            color: white;
+
+            span {
+                display: flex;
+                height: 100%;
+                padding-top: 15%;
+                align-items: center;
+                font-size: Config.$YVH6;
+                color: #9E9E9E;
+            }
+        }        
+    }
+
+    .userStatusCommentsContainer {
+        display: flex;        
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;        
+    }
+
+}

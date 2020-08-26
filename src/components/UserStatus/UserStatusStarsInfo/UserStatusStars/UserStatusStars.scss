@@ -1,0 +1,8 @@
+@use '../../../../config.scss' as Config;
+
+.userStatusStars {
+    display: flex;    
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}

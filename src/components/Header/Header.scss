@@ -1,12 +1,15 @@
+@use '../../config.scss' as Config;
+
 .headerContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 2.15%;
+    position: fixed;
+    z-index: 10;
+    height: Config.$headerHeight;
     padding: 0 16px;
-    background-color: #171717;
-    min-height: 41px;
+    background-color: Config.$backgroundColorDark;    
     width: 100%;
 
     .left {
@@ -32,17 +35,27 @@
     }
 
     .headerDiv {
-        background-color: #2196F3;
-        padding: 5px;
+        background-color: Config.$primaryColor;        
+        padding: Config.$Y8 0;
         border-radius: 5px;
         border: none;
         display: flex;
         justify-content: center;
-        align-items: center;
-        margin-left: 8px;
+        align-items: center;        
+    }
+
+    .headerDiv:hover {
+        animation-name: animBtnHeader;
+        animation-duration: 0.5s;
+        background-color: Config.$primaryColorDark;
     }
 }
 
 li{
     list-style: none;   
+}
+
+@keyframes animBtnHeader {
+    from {background-color: Config.$primaryColor}
+    to {background-color: Config.$primaryColorDark}
 }
